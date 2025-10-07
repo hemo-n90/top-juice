@@ -6,7 +6,6 @@
   --text: #222;
   --muted: #666;
 }
-
 /* Reset عام */
 * {
   box-sizing: border-box;
@@ -104,7 +103,7 @@ a {
   transform: translateY(-1px);
 }
 .nav-links.open {
-  display: flex;
+  display: block;
 }
 /* Mobile menu */
 .menu-toggle {
@@ -313,6 +312,12 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(255, 122, 26, 0.18);
 }
+/* @media (max-width: 480px) {
+  .card{
+    display: grid;
+    grid-template-rows: 2rem;
+  }
+} */
 .thumb {
   width: 100%;
   height: 150px;
@@ -610,9 +615,23 @@ footer {
   color: #fff;
 }
 
-/* دعم الشاشات الصغيرة */
 @media (max-width: 480px) {
   #social .socials {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px; /* اختياري: نخفّض المسافة شوي */
+  }
+  .thumb {
+    height: 120px; /* اختياري: نقلّل ارتفاع الصورة عشان كل شي يركب */
+  }
+}
+@media (max-width: 400px) {
+  .thumb {
+    height: 105px;
   }
 }
