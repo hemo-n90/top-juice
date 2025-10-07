@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قمة العصير</title>
+
+    <!-- أيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/fontawesome.min.css" />
+
+    <!-- Normalize أولاً ثم التنسيقات -->
+    <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/fontawesome.min.css" />
+
+
+
+    <!-- خطوط (تم تصحيح رابط Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Jomhuria&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo"><img src="/Image/TOP JUICE_page-0001.jpg" alt=""></div>
+          <div> 
+            <div class="brand-title">قمة العصير</div>
+          </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">القائمة</button>
+        <div class="nav-links" id="navLinks">
+          <li><a href="#Distinctive"> المميز</a></li>
+          <li><a href="#Mixtures">خلطات خاصة </a></li>
+          <li><a href="#fresh">العصيرات الاساسية</a></li>
+          <li><a href="#cocktails">كوكتيلات</a></li>
+          <li><a href="#Boxes">البوكسات</a></li>
+          <li><a href="#milkshakes">ميلك شيك</a></li>
+          <li><a href="#healthy">صحي وفيتامين</a></li>
+          <li><a href="#seasonal">نكهات </a></li>
+          <li><a href="#addons">إضافات</a></li>
+        </div>
+      </div>
+    </nav>
+        <!-- Start Landing -->
+    <div class="landing-Page">
+        <div class="overlay">
+          <!-- <img src="/Image//hero.1.jpg" alt=""> -->
+          <!-- <img src="/Image//hero.2.jpg" alt=""> -->
+          <img src="/Image//hero.3.jpg" alt="">
+        </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>قائمة قمة العصير</h1>
+        <p class="sub">
+          اختر من تشكيلتنا المنعشة من العصيرات الطازجة والكوكتيلات المميزة
+        </p>
+        <div class="search-wrap">
+          <input
+            id="search"
+            type="search"
+            placeholder="ابحث عن مشروب (مثال: برتقال، مانجو، سموثي)..."
+          />
+          <button id="clearSearch">مسح</button>
+        </div>
+        <div class="chips">
+          <a class="chip" href="#fresh">العصيرات الاساسية</a>
+          <a class="chip" href="#cocktails">كوكتيلات</a>
+          <a class="chip" href="#Boxes">البوكسات</a>
+          <a class="chip" href="#milkshakes">ميلك شيك</a>
+          <a class="chip" href="#healthy">صحي وفيتامين </a>
+          <a class="chip" href="#seasonal">فواكه موسمية</a>
+          <a class="chip" href="#addons">إضافات</a>
+          <a class="chip" href="#deals">عروض اليوم</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Image Lightbox (لفتح الصور عند الضغط على البطاقة) -->
+    <div
+      id="imgLightbox"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">
+        ×
+      </button>
+      <img id="lightboxImage" alt="" />
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <main class="container" id="menu">
+      <!-- Section: Distinctive -->
+      <section id="Distinctive" class="section">
+        <div class="section-header">
+          <h2>المميز</h2>
+          <span class="hint">يتم العصر عند الطلب</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="توب جوس">
+            <img
+              class="thumb"
+              src="Image/top-juice.JPG"
+              data-full="Image/توب-جوس-بدقة-عالية.jpg"
+              alt="توب جوس"
+            />
+            <div class="content">
+              <div class="title">
+                <span>توب جوس</span><span class="price">10 ر.س</span>
+              </div>
+              <div class="desc"></div>
+              <div class="tags">
+                <span class="tag">فيتامين C</span><span class="tag">منعش</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Mixtures -->
+      <section id="Mixtures" class="section">
+        <div class="section-header">
+          <h2>خلطات خاصة</h2>
+          <span class="hint">يتم العصر عند الطلب</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="برادايس">
+            <img class="thumb" src="Image/paradise.JPG" alt="عصير برتقال" />
+            <div class="content">
+              <div class="title">
+                <span>برادايس</span><span class="price">10 ر.س</span>
+              </div>
+              <div class="desc"></div>
+              <div class="tags">
+                <span class="tag">فيتامين C</span><span class="tag">منعش</span>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-name="رمان">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/8b0000/ffffff?text=%D8%B1%D9%85%D8%A7%D9%86"
+              alt="عصير رمان"
+            />
+            <div class="content">
+              <div class="title">
+                <span>رمان</span><span class="price">16 ر.س</span>
+              </div>
+              <div class="desc">حب رمان طبيعي 100%</div>
+              <div class="tags"><span class="tag">مضادات أكسدة</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="تفاح أخضر">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/5cb85c/ffffff?text=%D8%AA%D9%81%D8%A7%D8%AD"
+              alt="عصير تفاح"
+            />
+            <div class="content">
+              <div class="title">
+                <span>تفاح أخضر</span><span class="price">12 ر.س</span>
+              </div>
+              <div class="desc">تفاح جراني سميث بطعم حامضي خفيف</div>
+              <div class="tags"><span class="tag">طبيعي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="أناناس">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/ffc107/222?text=%D8%A3%D9%86%D8%A7%D9%86%D8%A7%D8%B3"
+              alt="عصير أناناس"
+            />
+            <div class="content">
+              <div class="title">
+                <span>أناناس</span><span class="price">14 ر.س</span>
+              </div>
+              <div class="desc">حلاوة طبيعية ولمسة ليمون</div>
+              <div class="tags"><span class="tag">استوائي</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Fresh Juices -->
+      <section id="fresh" class="section">
+        <div class="section-header">
+          <h2>العصيرات الاساسية</h2>
+          <span class="hint">يتم العصر عند الطلب</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="برتقال طازج">
+            <img class="thumb" src="Image/orange.JPG" alt="عصير برتقال" />
+            <div class="content">
+              <div class="title">
+                <span>برتقال طازج</span><span class="price">10 ر.س</span>
+              </div>
+              <div class="desc">برتقال سكري مع ثلج مجروش</div>
+              <div class="tags">
+                <span class="tag">فيتامين C</span><span class="tag">منعش</span>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-name="بطيخ">
+            <img class="thumb" src="Image/watermelon.JPG" alt="عصير بطيخ" />
+            <div class="content">
+              <div class="title">
+                <span>بطيخ</span><span class="price">16 ر.س</span>
+              </div>
+              <div class="desc"></div>
+              <div class="tags"><span class="tag">مضادات أكسدة</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="تفاح أخضر">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/5cb85c/ffffff?text=%D8%AA%D9%81%D8%A7%D8%AD"
+              alt="عصير تفاح"
+            />
+            <div class="content">
+              <div class="title">
+                <span>تفاح أخضر</span><span class="price">12 ر.س</span>
+              </div>
+              <div class="desc">تفاح جراني سميث بطعم حامضي خفيف</div>
+              <div class="tags"><span class="tag">طبيعي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="أناناس">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/ffc107/222?text=%D8%A3%D9%86%D8%A7%D9%86%D8%A7%D8%B3"
+              alt="عصير أناناس"
+            />
+            <div class="content">
+              <div class="title">
+                <span>أناناس</span><span class="price">14 ر.س</span>
+              </div>
+              <div class="desc">حلاوة طبيعية ولمسة ليمون</div>
+              <div class="tags"><span class="tag">استوائي</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Cocktails -->
+      <section id="cocktails" class="section">
+        <div class="section-header">
+          <h2>كوكتيلات</h2>
+          <span class="hint">خلطات خاصة بقمة العصير</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="كوكتيل قمة">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/f97316/ffffff?text=%D9%83%D9%88%D9%83%D8%AA%D9%8A%D9%84"
+              alt="كوكتيل"
+            />
+            <div class="content">
+              <div class="title">
+                <span>كوكتيل قمة</span><span class="price">18 ر.س</span>
+              </div>
+              <div class="desc">مانجو + فراولة + موز + حليب</div>
+              <div class="tags">
+                <span class="tag">توقيع</span><span class="tag">كريمي</span>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-name="تروبيكال">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/f59e0b/222?text=%D8%A7%D8%B3%D8%AA%D9%88%D8%A7%D8%A6%D9%8A"
+              alt="تروبيكال"
+            />
+            <div class="content">
+              <div class="title">
+                <span>تروبيكال</span><span class="price">19 ر.س</span>
+              </div>
+              <div class="desc">أناناس + جوز هند + مانجو</div>
+              <div class="tags"><span class="tag">استوائي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="ريد بيري">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/d61e5b/ffffff?text=%D8%AA%D9%88%D8%AA"
+              alt="ريد بيري"
+            />
+            <div class="content">
+              <div class="title">
+                <span>ريد بيري</span><span class="price">20 ر.س</span>
+              </div>
+              <div class="desc">فراولة + توت مشكل + ليموناضة</div>
+              <div class="tags"><span class="tag">منعش</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="آيس لاتيه مانجو">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/f2b98a/222?text=%D9%85%D8%A7%D9%86%D8%AC%D9%88+%D9%84%D8%A7%D8%AA%D9%8A%D9%87"
+              alt="آيس لاتيه مانجو"
+            />
+            <div class="content">
+              <div class="title">
+                <span>آيس لاتيه مانجو</span><span class="price">21 ر.س</span>
+              </div>
+              <div class="desc">مانجو مع لمسة قهوة باردة</div>
+              <div class="tags"><span class="tag">مميز</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Smoothies -->
+      <section id="Boxes" class="section">
+        <div class="section-header">
+          <h2>البوكسات</h2>
+          <span class="hint">سميك وكريمي</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="بوكس السعادة ">
+            <img
+              class="thumb"
+              src="Image/Happiness-Box.2.jpg"
+              alt=" بوكس السعادة"
+            />
+            <div class="content">
+              <div class="title">
+                <span> بوكس السعادة </span><span class="price">120 ر.س</span>
+              </div>
+              <div class="desc"></div>
+              <div class="tags"><span class="tag">منعش</span></div>
+            </div>
+          </article>
+      </section>
+
+      <!-- Section: Milkshakes -->
+      <section id="milkshakes" class="section">
+        <div class="section-header">
+          <h2>ميلك شيك</h2>
+          <span class="hint">نقدم آيسكريم فاخر</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="فانيلا">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/faf3dd/222?text=%D9%81%D8%A7%D9%86%D9%8A%D9%84%D8%A7"
+              alt="فانيلا"
+            />
+            <div class="content">
+              <div class="title">
+                <span>فانيلا</span><span class="price">16 ر.س</span>
+              </div>
+              <div class="desc">كلاسيك بس مو بسيط</div>
+              <div class="tags"><span class="tag">كريمي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="شوكولاتة">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/6b3a1f/ffffff?text=%D8%B4%D9%88%D9%83%D9%88%D9%84%D8%A7%D8%AA%D8%A9"
+              alt="شوكولاتة"
+            />
+            <div class="content">
+              <div class="title">
+                <span>شوكولاتة</span><span class="price">18 ر.س</span>
+              </div>
+              <div class="desc">شوكولاتة دارك 60%</div>
+              <div class="tags"><span class="tag">غني</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="فراولة">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/fd5d5d/ffffff?text=%D9%81%D8%B1%D8%A7%D9%88%D9%84%D8%A9"
+              alt="فراولة"
+            />
+            <div class="content">
+              <div class="title">
+                <span>فراولة</span><span class="price">18 ر.س</span>
+              </div>
+              <div class="desc">محبوب الصغار والكبار</div>
+              <div class="tags"><span class="tag">حلو</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="أوريو">
+            <img
+              class="thumb"
+              src="/Image/Oreo-milkshake.jpg"
+              alt="أوريو"
+            />
+            <div class="content">
+              <div class="title">
+                <span>أوريو</span><span class="price">19 ر.س</span>
+              </div>
+              <div class="desc">بسكويت مجروش وتوبنج</div>
+              <div class="tags"><span class="tag">مقرمش</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Healthy -->
+      <section id="healthy" class="section">
+        <div class="section-header">
+          <h2>صحي وفيتامين</h2>
+          <span class="hint">من دون سكر مضاف</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="ليمون نعناع">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/34d399/222?text=%D9%86%D8%B9%D9%86%D8%A7%D8%B9+%D9%84%D9%8A%D9%85%D9%88%D9%86"
+              alt="ليمون نعناع"
+            />
+            <div class="content">
+              <div class="title">
+                <span>ليمون نعناع</span><span class="price">12 ر.س</span>
+              </div>
+              <div class="desc">منعش وموازِن</div>
+              <div class="tags"><span class="tag">ديتوكس</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="خيار ليمون">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/86efac/222?text=%D8%AE%D9%8A%D8%A7%D8%B1+%D9%84%D9%8A%D9%85%D9%88%D9%86"
+              alt="خيار ليمون"
+            />
+            <div class="content">
+              <div class="title">
+                <span>خيار ليمون</span><span class="price">12 ر.س</span>
+              </div>
+              <div class="desc">خيار مع لمسة زنجبيل</div>
+              <div class="tags"><span class="tag">منخفض سعرات</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="تفاح كرفس">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/a7f3d0/222?text=%D8%AA%D9%81%D8%A7%D8%AD+%D9%83%D8%B1%D9%81%D8%B3"
+              alt="تفاح كرفس"
+            />
+            <div class="content">
+              <div class="title">
+                <span>تفاح كرفس</span><span class="price">14 ر.س</span>
+              </div>
+              <div class="desc">منعش ولطيف معدة</div>
+              <div class="tags"><span class="tag">صحي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="شمندر عافية">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/be123c/ffffff?text=%D8%B4%D9%85%D9%86%D8%AF%D8%B1"
+              alt="شمندر"
+            />
+            <div class="content">
+              <div class="title">
+                <span>شمندر عافية</span><span class="price">15 ر.س</span>
+              </div>
+              <div class="desc">شمندر + جزر + تفاح</div>
+              <div class="tags"><span class="tag">طاقة</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Seasonal -->
+      <section id="seasonal" class="section">
+        <div class="section-header">
+          <h2>فواكه موسمية</h2>
+          <span class="hint">حسب التوفر</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="مانجو موسمي">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/f59e0b/222?text=%D9%85%D8%A7%D9%86%D8%AC%D9%88"
+              alt="مانجو"
+            />
+            <div class="content">
+              <div class="title">
+                <span>مانجو موسمي</span><span class="price">18 ر.س</span>
+              </div>
+              <div class="desc">مانجو يمني/هندي حسب الموسم</div>
+              <div class="tags"><span class="tag">محدود</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="فراولة طازجة">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/ef4444/ffffff?text=%D9%81%D8%B1%D8%A7%D9%88%D9%84%D8%A9"
+              alt="فراولة"
+            />
+            <div class="content">
+              <div class="title">
+                <span>فراولة طازجة</span><span class="price">16 ر.س</span>
+              </div>
+              <div class="desc">حمراء لامعة بنكهة طبيعية</div>
+              <div class="tags"><span class="tag">طازج</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="بطيخ مثلج">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/ef4444/ffffff?text=%D8%A8%D8%B7%D9%8A%D8%AE"
+              alt="بطيخ"
+            />
+            <div class="content">
+              <div class="title">
+                <span>بطيخ مثلج</span><span class="price">12 ر.س</span>
+              </div>
+              <div class="desc">مثالي للصيف</div>
+              <div class="tags"><span class="tag">منعش</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="رطب/تمر بالحليب">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/8b5e34/ffffff?text=%D8%AA%D9%85%D8%B1"
+              alt="تمر بالحليب"
+            />
+            <div class="content">
+              <div class="title">
+                <span>تمر بالحليب</span><span class="price">16 ر.س</span>
+              </div>
+              <div class="desc">بلح طري وحليب بارد</div>
+              <div class="tags"><span class="tag">تقليدي</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Addons -->
+      <section id="addons" class="section">
+        <div class="section-header">
+          <h2>إضافات</h2>
+          <span class="hint">زد النكهة على ذوقك</span>
+        </div>
+        <div class="grid">
+          <article class="card" data-name="عسل طبيعي">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/fbbf24/222?text=%D8%B9%D8%B3%D9%84"
+              alt="عسل"
+            />
+            <div class="content">
+              <div class="title">
+                <span>عسل طبيعي</span><span class="price">+3 ر.س</span>
+              </div>
+              <div class="desc">عسل سدر مختار</div>
+              <div class="tags"><span class="tag">تحلية</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="بروتين">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/94a3b8/ffffff?text=%D8%A8%D8%B1%D9%88%D8%AA%D9%8A%D9%86"
+              alt="بروتين"
+            />
+            <div class="content">
+              <div class="title">
+                <span>بروتين</span><span class="price">+5 ر.س</span>
+              </div>
+              <div class="desc">وي بروتين فانيلا</div>
+              <div class="tags"><span class="tag">رياضة</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="بذور شيا">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/16a34a/ffffff?text=%D8%B4%D9%8A%D8%A7"
+              alt="بذور شيا"
+            />
+            <div class="content">
+              <div class="title">
+                <span>بذور شيا</span><span class="price">+3 ر.س</span>
+              </div>
+              <div class="desc">ألياف وأوميغا</div>
+              <div class="tags"><span class="tag">صحي</span></div>
+            </div>
+          </article>
+          <article class="card" data-name="بوست توت">
+            <img
+              class="thumb"
+              src="https://placehold.co/600x400/7c3aed/ffffff?text=%D8%AA%D9%88%D8%AA"
+              alt="بوست توت"
+            />
+            <div class="content">
+              <div class="title">
+                <span>بوست توت</span><span class="price">+4 ر.س</span>
+              </div>
+              <div class="desc">مكثف نكهة التوت</div>
+              <div class="tags"><span class="tag">نكهة</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Deals -->
+      <section id="deals" class="section">
+        <div class="section-header">
+          <h2>عروض اليوم</h2>
+                </section>
+            <div >
+                <h2>لاتوجد عروض حاليا </h2>
+            </div>
+        <!-- Section: Social media -->
+      <div class="Social-media">
+      <section id="social" class="section">
+        <div class="section-header">
+          <h2>حسابات التواصل الاجتماعي</h2>
+          <span class="hint">Social media accounts</span>
+        </div>
+
+        <ul class="socials">
+          <li>
+            <a class="social tiktok" href="https://www.tiktok.com/@1top.juice" target="_blank" rel="noopener">
+              <i class="fa-brands fa-tiktok"></i>
+              <span>@1top.juice</span>
+            </a>
+          </li>
+          <li>
+            <a class="social instagram" href="https://www.instagram.com/1topjuice?igsh=eTJtNG9mbzJyZXpk" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram"></i>
+              <span>@1topjuice</span>
+            </a>
+          </li>
+          <li>
+            <a class="social snapchat" href="https://snapchat.com/t/ALbg9Km0" target="_blank" rel="noopener">
+              <i class="fa-brands fa-snapchat"></i>
+              <span>@qmlsyr</span>
+            </a>
+          </li>
+          <li>
+            <a class="social whatsapp" href="https://web.whatsapp.com/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>0540063366</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      </div>
+    </main>
+
+    <footer>© <span id="year"></span> قمة العصير — صحة وهنا!</footer>
+
+    <button class="to-top" id="toTop">أعلى ↑</button>
+
+    <!-- سكربت -->
+    <script src="script.js"></script>
+  </body>
+</html>
