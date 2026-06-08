@@ -160,3 +160,102 @@ document.addEventListener("keydown", (e) => {
 //   stopSlideshow();
 //   startSlideshow();
 // }
+// ===== زر "المكوّنات" + قلب الكروت =====
+function setupFlipCard(card) {
+  const thumb = card.querySelector("img.thumb");
+  const content = card.querySelector(".content");
+  if (!thumb || !content) return;
+
+  // أنشئ الغلاف الداخلي والوجهين
+  const inner = document.createElement("div");
+  inner.className = "card-inner";
+
+  const front = document.createElement("div");
+  front.className = "card-front";
+
+  // انقل المحتوى الحالي للوجه الأمامي
+  while (card.firstChild) {
+    front.appendChild(card.firstChild);
+  }
+
+  // تجهيز بيانات المكوّنات
+  const title = (
+    card.dataset?.name ||
+    front.querySelector(".title span")?.textContent ||
+    ""
+  ).trim();
+  const dataIngs = (card.dataset?.ingredients || "").trim();
+
+  // إن ما فيه data-ingredients، نجرب ناخذها من التاغات أو الوصف
+  const contentEl = front.querySelector(".content");
+  const tagsText = Array.from(contentEl?.querySelectorAll(".tags .tag") || [])
+    .map((t) => t.textContent.trim())
+    .filter(Boolean);
+  const descText = (
+    contentEl?.querySelector(".desc")?.textContent || ""
+  ).trim();
+
+  let raw = dataIngs || (tagsText.length ? tagsText.join("، ") : descText);
+  let ings = raw
+    ? raw
+        .split(/[,،+]/)
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : [];
+
+  // الواجهة الخلفية
+  const back = document.createElement("div");
+  back.className = "card-back";
+  back.innerHTML = `
+    <h3>${title ? "مكوّنات " + title : "المكوّنات"}</h3>
+    <ul class="ing-list">
+      ${
+        ings.length
+          ? ings.map((i) => `<li>${i}</li>`).join("")
+          : "<li>لم يتم إدخال المكوّنات</li>"
+      }
+    </ul>
+    <button type="button" class="flip-close" aria-label="إغلاق المكوّنات">رجوع</button>
+  `;
+
+  // تركيب الوجهين داخل inner ثم إرجاعهم للكارد
+  inner.appendChild(front);
+  inner.appendChild(back);
+  card.appendChild(inner);
+
+  // زر "المكوّنات" في الواجهة الأمامية
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "ingredients-btn";
+  btn.textContent = "المكوّنات";
+  contentEl?.appendChild(btn);
+
+  // أحداث الانقلاب
+  const flipToBack = (e) => {
+    e?.preventDefault();
+    e?.stopPropagation(); // يمنع فتح اللايت بوكس
+    card.classList.add("is-flipped");
+  };
+  const flipToFront = (e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    card.classList.remove("is-flipped");
+  };
+
+  btn.addEventListener("click", flipToBack);
+  back.querySelector(".flip-close")?.addEventListener("click", flipToFront);
+
+  // أي نقرة داخل الظهر لا تفتح اللايت بوكس
+  back.addEventListener("click", (e) => e.stopPropagation());
+}
+
+// طبّقها على جميع الكروت
+document.querySelectorAll(".card").forEach(setupFlipCard);
+
+// ESC يرجّع أي كارد مقلوب
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const flipped = document.querySelector(".card.is-flipped");
+    if (flipped) flipped.classList.remove("is-flipped");
+  }
+});
