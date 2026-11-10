@@ -32,7 +32,7 @@ Open http://localhost:8080. No npm installation, build step, database or environ
 <!-- Add real screenshots here: desktop menu, filtered results, mobile navigation. -->
 
 ## Live demo
-No deployment URL has been verified for this documentation. Add a verified public URL before using this project in applications.
+[Open Top Juice](https://top-juice.vercel.app). The URL returned HTTP 200 on 10 November 2026; this is an availability check, not a complete functional or accessibility test.
 
 ## Contribution
 The repository contains commits linked to [hemo-n90](https://github.com/hemo-n90). This describes the application, not a claim that all assets or third-party libraries were authored by one person.
