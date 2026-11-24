@@ -966,3 +966,10 @@ footer {
 .ingredients-btn {
   margin-top: 0;
 }
+
+/* Brand icons are inline SVG (Font Awesome Free, CC BY 4.0) */
+.social .social-icon {
+  width: 1.4em;
+  height: 1.4em;
+  flex-shrink: 0;
+}

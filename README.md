@@ -1,6 +1,19 @@
 # Top Juice — Arabic Menu Website
 
-An Arabic product menu built with HTML, CSS and JavaScript.
+The menu website of a Saudi juice shop, built with HTML, CSS and vanilla JavaScript. It is live at **[top-juice.vercel.app](https://top-juice.vercel.app)**.
+
+<p align="center">
+  <img src="docs/screenshots/home-desktop.jpg" alt="Home" width="49%">
+  <img src="docs/screenshots/menu-desktop.jpg" alt="Menu cards with sizes and prices" width="49%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/lightbox-desktop.jpg" alt="Image lightbox" width="49%">
+  <img src="docs/screenshots/socials-desktop.jpg" alt="Social links" width="49%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/home-mobile.jpg" alt="Mobile home" width="24%">
+  <img src="docs/screenshots/nav-mobile.jpg" alt="Mobile navigation" width="24%">
+</p>
 
 ## Overview
 Visitors can browse product cards, filter products by name and open larger product images. The site is a static frontend; it does not implement checkout, payments or a backend.
@@ -26,16 +39,22 @@ Open http://localhost:8080. No npm installation, build step, database or environ
 - `CSS/`: styles.
 - `script.js`: search, navigation and image interactions.
 - `Image/`: product images.
-- `fonts/`: bundled icon assets.
 
-## Screenshots
-<!-- Add real screenshots here: desktop menu, filtered results, mobile navigation. -->
+## Performance work
+- The repository shrank from about 170 MB to 11 MB:
+  - removed 12 unused images, including two 13 MB photos
+  - resized product photos to at most 900 px (hero images to 1920 px)
+  - re-encoded opaque PNG photos as progressive JPEG
+  - replaced an unused 24 MB Font Awesome package with four inline SVG icons
+- Product images load lazily (`loading="lazy"`, `decoding="async"`).
+- The social icons were missing because the icon font was never linked. They now render as inline SVG.
+- Added the favicon files the page already referenced, which used to return 404.
 
 ## Live demo
-[Open Top Juice](https://top-juice.vercel.app). The URL returned HTTP 200 on 10 November 2026; this is an availability check, not a complete functional or accessibility test.
+[top-juice.vercel.app](https://top-juice.vercel.app). The search, lightbox, mobile navigation and social links were checked in headless Chrome on 24 November 2026.
 
 ## Contribution
 The repository contains commits linked to [hemo-n90](https://github.com/hemo-n90). This describes the application, not a claim that all assets or third-party libraries were authored by one person.
 
 ## Next improvements
-Optimize image and icon payloads; verify image paths on case-sensitive hosting; add keyboard focus management to the lightbox; test small screens and reduced-motion preferences.
+Serve WebP/AVIF with `<picture>` fallbacks; add keyboard focus management to the lightbox; respect reduced-motion preferences.
